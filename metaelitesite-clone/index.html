@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quantiun Meta - Fast and professional Meta verification assistance for Facebook, Instagram & WhatsApp">
+    <meta name="theme-color" content="#1877F2">
+    <title>Quantiun Meta | Official Meta Verification Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1877F2;
+            --primary-dark: #0A5FD7;
+            --primary-light: #3B91F7;
+            --bg-dark: #0b0f1a;
+            --bg-darker: #050608;
+            --bg-card: rgba(255, 255, 255, 0.08);
+            --bg-card-hover: rgba(255, 255, 255, 0.12);
+            --text-primary: #FFFFFF;
+            --text-secondary: #B8C5D6;
+            --accent-cyan: #00D9FF;
+            --accent-purple: #7B68EE;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --success: #10B981;
+            --warning: #F59E0B;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 50%, #1a2847 100%);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* HEADER STYLES */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+            background: rgba(11, 15, 26, 0.7);
+            border-bottom: 1px solid var(--border-color);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-circle {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: white;
+            box-shadow: 0 8px 24px rgba(24, 119, 242, 0.3);
+        }
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            margin-top: 80px;
+            padding: 4rem 2rem;
+            min-height: calc(100vh - 80px);
+            background: linear-gradient(180deg, rgba(24, 119, 242, 0.1) 0%, transparent 50%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(24, 119, 242, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-40px); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .btn {
+            padding: 0.95rem 2.5rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+            color: white;
+            box-shadow: 0 8px 24px rgba(24, 119, 242, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(24, 119, 242, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* SECTION STYLES */
+        section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* BENEFITS SECTION */
+        .benefits {
+            background: linear-gradient(180deg, transparent 0%, rgba(24, 119, 242, 0.05) 100%);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            position: relative;
+            overflow: hidden;
+            animation: scaleIn 0.6s ease-out backwards;
+        }
+
+        .benefit-card:nth-child(1) { animation-delay: 0.1s; }
+        .benefit-card:nth-child(2) { animation-delay: 0.2s; }
+        .benefit-card:nth-child(3) { animation-delay: 0.3s; }
+        .benefit-card:nth-child(4) { animation-delay: 0.4s; }
+        .benefit-card:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(24, 119, 242, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            transition: all 0.6s ease;
+        }
+
+        .benefit-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(24, 119, 242, 0.2);
+        }
+
+        .benefit-card:hover::before {
+            top: -25%;
+            right: -25%;
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .benefit-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .benefit-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* HOW IT WORKS SECTION */
+        .how-it-works {
+            background: linear-gradient(180deg, rgba(24, 119, 242, 0.05) 0%, transparent 100%);
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .step {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(20px);
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+            animation: slideUp 0.6s ease-out backwards;
+        }
+
+        .step:nth-child(1) { animation-delay: 0.1s; }
+        .step:nth-child(2) { animation-delay: 0.2s; }
+        .step:nth-child(3) { animation-delay: 0.3s; }
+        .step:nth-child(4) { animation-delay: 0.4s; }
+        .step:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .step:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);
+        }
+
+        .step h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .step p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .steps-note {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 12px;
+            color: var(--warning);
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* PRICING SECTION */
+        .pricing {
+            background: linear-gradient(180deg, transparent 0%, rgba(24, 119, 242, 0.05) 100%);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+            position: relative;
+            transition: all 0.4s ease;
+            animation: zoomIn 0.6s ease-out backwards;
+        }
+
+        .pricing-card:nth-child(1) { animation-delay: 0.1s; }
+        .pricing-card:nth-child(2) { animation-delay: 0.2s; }
+        .pricing-card:nth-child(3) { animation-delay: 0.3s; }
+        .pricing-card:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.85);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .pricing-card.popular {
+            border-color: var(--primary);
+            background: linear-gradient(135deg, rgba(24, 119, 242, 0.15) 0%, rgba(0, 217, 255, 0.05) 100%);
+            transform: scaleY(1.05);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(24, 119, 242, 0.2);
+        }
+
+        .pricing-card.popular:hover {
+            transform: scaleY(1.05) translateY(-8px);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+        }
+
+        .pricing-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .price {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .price-currency {
+            font-size: 1.3rem;
+        }
+
+        .pricing-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* REVIEWS SECTION */
+        .reviews {
+            background: linear-gradient(180deg, rgba(24, 119, 242, 0.05) 0%, transparent 100%);
+        }
+
+        .carousel-container {
+            overflow: hidden;
+            border-radius: 16px;
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+        }
+
+        .carousel {
+            display: flex;
+            animation: autoScroll 40s linear infinite;
+        }
+
+        @keyframes autoScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .review-card {
+            min-width: 100%;
+            padding: 3rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            backdrop-filter: blur(20px);
+            margin: 1rem;
+            flex: 0 0 calc(33.333% - 2rem);
+        }
+
+        @media (max-width: 1024px) {
+            .review-card {
+                flex: 0 0 calc(50% - 2rem);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .review-card {
+                flex: 0 0 100%;
+            }
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: white;
+        }
+
+        .review-info h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .review-info span {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .review-text {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* LIVE ACTIVITY SECTION */
+        .live-activity {
+            background: linear-gradient(180deg, transparent 0%, rgba(24, 119, 242, 0.05) 100%);
+        }
+
+        .ticker {
+            background: linear-gradient(90deg, rgba(24, 119, 242, 0.1) 0%, rgba(0, 217, 255, 0.05) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .ticker-content {
+            display: flex;
+            gap: 3rem;
+            animation: ticker 20s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .ticker-item {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .ticker-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* FORM SECTION */
+        .form-section {
+            background: linear-gradient(180deg, rgba(24, 119, 242, 0.05) 0%, transparent 100%);
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.95rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(184, 197, 214, 0.6);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231877F2' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+        }
+
+        .form-group .btn {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            background: linear-gradient(180deg, transparent 0%, rgba(24, 119, 242, 0.05) 100%);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(20px);
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: slideUp 0.6s ease-out backwards;
+        }
+
+        .contact-item:nth-child(1) { animation-delay: 0.1s; }
+        .contact-item:nth-child(2) { animation-delay: 0.2s; }
+        .contact-item:nth-child(3) { animation-delay: 0.3s; }
+        .contact-item:nth-child(4) { animation-delay: 0.4s; }
+
+        .contact-item:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            word-break: break-word;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--bg-darker);
+            border-top: 1px solid var(--border-color);
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            color: var(--text-primary);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-disclaimer {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 1rem;
+            }
+
+            nav {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                margin-top: 70px;
+                padding: 2rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                gap: 1rem;
+            }
+
+            .btn {
+                padding: 0.8rem 2rem;
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+
+            .benefits-grid,
+            .steps-container,
+            .pricing-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .pricing-card.popular {
+                transform: scaleY(1);
+            }
+
+            .pricing-card.popular:hover {
+                transform: translateY(-8px);
+            }
+
+            .form-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .carousel {
+                animation: none;
+            }
+
+            .review-card {
+                flex: 0 0 100%;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .hero {
+                margin-top: 150px;
+            }
+
+            .logo-circle {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .form-container {
+                padding: 1.5rem;
+            }
+
+            .contact-item {
+                padding: 1.5rem;
+            }
+
+            .ticker-content {
+                gap: 1.5rem;
+            }
+        }
+
+        /* SMOOTH SCROLLBAR (optional) */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-circle">QM</div>
+                <div class="logo-text">Quantiun Meta</div>
+            </div>
+            <nav>
+                <a href="#hero">Home</a>
+                <a href="#services">Services</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Get Verified Blue Tick for Facebook, Instagram & WhatsApp</h1>
+            <p>Fast and professional Meta verification assistance using secure business processes.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToForm()">Get Started</button>
+                <a href="https://wa.me/18177345639?text=Hello%20Quantiun%20Meta!%20I'm%20interested%20in%20verification%20services." class="btn btn-secondary">Contact on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="benefits" id="services">
+        <h2 class="section-title">Why Choose Quantiun Meta?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">✨</div>
+                <h3>Increase Trust & Authority</h3>
+                <p>Build instant credibility with verified badges that signal authenticity to your audience.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🏢</div>
+                <h3>Verified Business Identity</h3>
+                <p>Establish your business as legitimate and official on Meta platforms.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📈</div>
+                <h3>Boost Reach & Engagement</h3>
+                <p>Verified accounts get higher visibility and better engagement rates.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <h3>Improve Brand Credibility</h3>
+                <p>Stand out from competitors and establish market leadership in your niche.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🚀</div>
+                <h3>Grow Faster Online Presence</h3>
+                <p>Accelerate your digital growth with verified status and expanded reach.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Submit Details</h3>
+                <p>Client submits business information and documents</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Manager Setup Review</h3>
+                <p>We review your Business Manager setup and requirements</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Documents Verified</h3>
+                <p>All documents undergo thorough verification process</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Service Activation</h3>
+                <p>Your account is configured and optimized for verification</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>Final Submission</h3>
+                <p>Submit for Meta verification and await approval</p>
+            </div>
+        </div>
+        <div class="steps-note">
+            ⚠️ Processing depends on Meta review system. Final approval timeframe varies (typically 3-7 business days).
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="pricing" id="pricing">
+        <h2 class="section-title">Transparent Pricing</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Facebook Verification</h3>
+                <div class="price"><span class="price-currency">$</span>130</div>
+                <p>Professional blue tick for your Facebook page</p>
+                <button class="btn btn-primary" onclick="selectService('Facebook Verification - $13')">Select Plan</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Instagram Verification</h3>
+                <div class="price"><span class="price-currency">$</span>130</div>
+                <p>Get verified badge on your Instagram account</p>
+                <button class="btn btn-primary" onclick="selectService('Instagram Verification - $13')">Select Plan</button>
+            </div>
+            <div class="pricing-card popular">
+                <span class="popular-badge">MOST POPULAR</span>
+                <h3>WhatsApp Verification</h3>
+                <div class="price"><span class="price-currency">$</span>230</div>
+                <p>Verified business account with WhatsApp badge</p>
+                <button class="btn btn-primary" onclick="selectService('WhatsApp Verification - $10')">Select Plan</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Monthly Handling</h3>
+                <div class="price"><span class="price-currency">$</span>4</div>
+                <p>Ongoing account management and support</p>
+                <button class="btn btn-primary" onclick="selectService('Monthly Handling - $4')">Select Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="reviews" id="reviews">
+        <h2 class="section-title">Customer Reviews</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">A</div>
+                        <div class="review-info">
+                            <h4>Ali Ahmed</h4>
+                            <span>📍 UAE</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Quantiun Meta made the entire process seamless. Got verified in just 5 days! Highly recommend their service."</p>
+                    <div class="verified-badge">✓ Verified Customer</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">S</div>
+                        <div class="review-info">
+                            <h4>Sara Johnson</h4>
+                            <span>🇬🇧 United Kingdom</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Professional, reliable, and transparent. They handled Instagram verification perfectly. Worth every penny!"</p>
+                    <div class="verified-badge">✓ Verified Customer</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">A</div>
+                        <div class="review-info">
+                            <h4>Ahmed Hassan</h4>
+                            <span>🇵🇰 Pakistan</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Finally got my blue tick! Quantiun Meta's guidance was crystal clear. Best investment for my brand."</p>
+                    <div class="verified-badge">✓ Verified Customer</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">F</div>
+                        <div class="review-info">
+                            <h4>Fatima Khan</h4>
+                            <span>🇵🇰 Pakistan</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Excellent customer support and quick turnaround. My business is now verified and growing!"</p>
+                    <div class="verified-badge">✓ Verified Customer</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">M</div>
+                        <div class="review-info">
+                            <h4>Mohammed Khan</h4>
+                            <span>📍 Saudi Arabia</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Incredibly professional service. Got WhatsApp verified in a week. Highly satisfied!"</p>
+                    <div class="verified-badge">✓ Verified Customer</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">L</div>
+                        <div class="review-info">
+                            <h4>Lisa Chen</h4>
+                            <span>🇦🇺 Australia</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Great experience from start to finish. Quantiun Meta knows exactly how to navigate Meta's verification system."</p>
+                    <div class="verified-badge">✓ Verified Customer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE ACTIVITY -->
+    <section class="live-activity">
+        <h2 class="section-title">Live Activity</h2>
+        <div class="ticker">
+            <div class="ticker-content">
+                <div class="ticker-item">
+                    <span class="ticker-dot"></span>
+                    <span>🎉 Ali from UAE got verified</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-dot"></span>
+                    <span>🎉 Sara from UK completed Instagram verification</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-dot"></span>
+                    <span>🎉 Ahmed from Pakistan processed successfully</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-dot"></span>
+                    <span>🎉 Fatima from Pakistan WhatsApp verified</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-dot"></span>
+                    <span>🎉 Mohammed from Saudi Arabia now verified</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-dot"></span>
+                    <span>🎉 Lisa from Australia completed verification</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORDER FORM SECTION -->
+    <section class="form-section" id="form">
+        <h2 class="section-title">Order Now</h2>
+        <div class="form-container">
+            <form id="orderForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp Number *</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="+92 3XX XXXXXXX" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Select Service *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Choose a service...</option>
+                        <option value="Facebook Verification">Facebook Verification ($13)</option>
+                        <option value="Instagram Verification">Instagram Verification ($13)</option>
+                        <option value="WhatsApp Verification">WhatsApp Verification ($10)</option>
+                        <option value="Monthly Handling">Monthly Handling ($4)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your business..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Order Now via WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <a href="mailto:deegrimreaper@gmail.com">deegrimreaper@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📘</div>
+                <h3>Facebook</h3>
+                <a href="https://facebook.com/QuantiunMeta.Shop" target="_blank">Quantiun Meta.Shop</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📸</div>
+                <h3>Instagram</h3>
+                <a href="https://instagram.com/QuantiunMeta.Shop" target="_blank">Quantiun Meta.Shop</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">💬</div>
+                <h3>WhatsApp</h3>
+                <a href="https://wa.me/18177345639">+18177345639</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">Quantiun Meta © 2026</p>
+            <p class="footer-disclaimer">
+                We are independent service providers and not affiliated with Meta Platforms Inc. 
+                All services are provided in compliance with Meta's verification guidelines and policies.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToForm() {
+            const formSection = document.getElementById('form');
+            formSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function selectService(serviceName) {
+            document.getElementById('service').value = serviceName.split(' - ')[0];
+            scrollToForm();
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const fullName = document.getElementById('fullName').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            // Format the message for WhatsApp
+            const whatsappMessage = `New Order Request%0A%0A` +
+                `Name: ${encodeURIComponent(fullName)}%0A` +
+                `Phone: ${encodeURIComponent(whatsapp)}%0A` +
+                `Email: ${encodeURIComponent(email)}%0A` +
+                `Service: ${encodeURIComponent(service)}%0A` +
+                `Message: ${encodeURIComponent(message)}`;
+
+            // Redirect to WhatsApp with the message
+            const whatsappURL = `https://wa.me/18177345639?text=${whatsappMessage}`;
+            window.open(whatsappURL, '_blank');
+
+            // Reset form
+            document.getElementById('orderForm').reset();
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Mobile menu toggle (for future enhancement)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add any additional initialization here
+        });
+    </script>
+</body>
+</html>

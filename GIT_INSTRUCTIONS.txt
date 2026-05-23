@@ -1,0 +1,29 @@
+How to install Git on Windows and commit the changes
+
+1) Install Git for Windows:
+- Download from: https://git-scm.com/download/win
+- Run the installer with default options (or choose according to preference).
+
+2) Configure Git (run once):
+
+```powershell
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+3) Commit the changes using the helper script (run in the repo folder):
+
+```powershell
+cd "C:\Users\Dell\OneDrive\Documents\GitHub\metaelitesite"
+.\commit_changes.ps1
+```
+
+If `git` is still not recognized after installation, restart your terminal or log out and back in.
+
+If you prefer, run the git commands manually instead of the script:
+
+```powershell
+cd "C:\Users\Dell\OneDrive\Documents\GitHub\metaelitesite"
+git add index.html metaelitesite-clone/index.html
+git commit -m "Update contact info: WhatsApp +18177345639 and email deegrimreaper@gmail.com"
+```
